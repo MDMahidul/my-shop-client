@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { TbFidgetSpinner } from "react-icons/tb";
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const [errors, setErrors] = useState("");
@@ -20,6 +21,13 @@ const Login = () => {
       signIn(email, password)
         .then((result) => {
           console.log(result.user);
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Login Successful!!!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           navigate(from, { replace: true });
           setErrors('');
         })

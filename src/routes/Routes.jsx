@@ -10,11 +10,13 @@ import PrivateRoute from "./PrivateRoute";
 import Product from "../pages/DashBoard/Product/Product";
 import Customer from "../pages/DashBoard/Customer/Customer";
 import Orders from "../pages/DashBoard/Orders/Orders";
+import Error from "../pages/Error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
+    errorElement:<Error></Error>,
     children: [
       {
         path: "/",

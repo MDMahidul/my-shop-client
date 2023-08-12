@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { TbFidgetSpinner } from "react-icons/tb";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const [errors, setErrors] = useState("");
@@ -44,7 +45,14 @@ const Register = () => {
             updateUserProfile(name, imageUrl)
               .then(() => {
                 //console.log(result.user);
-                navigate(from, { replace: true });
+                Swal.fire({
+                  position: "center",
+                  icon: "success",
+                  title: "Sign Up Successful!!!",
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                navigate("/");
               })
               .catch((err) => {
                 setLoading(false);

@@ -22,7 +22,7 @@ const DashBoard = () => {
               <h5 className="mb-3 text-center text-2xl font-bold text-gray-900">
                 Total Products: 200
               </h5>
-              <Link to="/dashboard/products" className="card-btn">
+              <Link to="dashboard/products" className="card-btn">
                 Details
               </Link>
             </div>
@@ -33,7 +33,7 @@ const DashBoard = () => {
               <h5 className="mb-3 text-center text-2xl font-bold text-gray-900">
                 Total Customers: 200
               </h5>
-              <Link to="/dashboard/products" className="card-btn">
+              <Link to="dashboard/customers" className="card-btn">
                 Details
               </Link>
             </div>
@@ -44,7 +44,7 @@ const DashBoard = () => {
               <h5 className="mb-3 text-center text-2xl font-bold text-gray-900">
                 Total Orders: 200
               </h5>
-              <Link to="/dashboard/products" className="card-btn">
+              <Link to="dashboard/orders" className="card-btn">
                 Details
               </Link>
             </div>

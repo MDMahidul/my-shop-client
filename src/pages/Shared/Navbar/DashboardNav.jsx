@@ -34,7 +34,7 @@ const DashboardNav = () => {
           className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 "
           aria-label="Sidebar"
         >
-          <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 ">
+          <div className="h-full px-3 py-4 overflow-y-auto bg-gray-200 ">
             <Link to="/" className="flex items-center pt-4 ps-2 mb-3">
               <img className="w-8" src={logo} alt="" />
               <span className="text-gray-900 font-semibold text-base ml-2">
