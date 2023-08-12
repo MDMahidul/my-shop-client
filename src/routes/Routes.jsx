@@ -5,8 +5,11 @@ import DashBoardLayout from "../Layouts/DashBoardLayout";
 import Home from "../pages/Home/Home";
 import Login from '../pages/Login/Login';
 import Register from '../pages/Login/Register';
-import DashBoard from "../pages/Home/DashBoard";
+import DashBoard from "../pages/DashBoard/DashBoard/DashBoard";
 import PrivateRoute from "./PrivateRoute";
+import Product from "../pages/DashBoard/Product/Product";
+import Customer from "../pages/DashBoard/Customer/Customer";
+import Orders from "../pages/DashBoard/Orders/Orders";
 
 const router = createBrowserRouter([
   {
@@ -29,15 +32,27 @@ const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <DashBoardLayout />,
+    element: (
+      <PrivateRoute>
+        <DashBoardLayout />
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "/dashboard",
-        element: (
-          <PrivateRoute>
-            <DashBoard />
-          </PrivateRoute>
-        ),
+        element: <DashBoard />,
+      },
+      {
+        path: "dashboard/products",
+        element: <Product></Product>,
+      },
+      {
+        path: "dashboard/customers",
+        element: <Customer />,
+      },
+      {
+        path: "dashboard/orders",
+        element: <Orders />,
       },
     ],
   },

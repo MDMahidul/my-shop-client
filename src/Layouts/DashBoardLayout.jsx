@@ -4,10 +4,12 @@ import { Outlet } from 'react-router-dom';
 
 const DashBoardLayout = () => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2'>
-            <DashboardNav></DashboardNav>
-            <Outlet></Outlet>
+      <div>
+        <DashboardNav></DashboardNav>
+        <div className="md:ms-72 px-4">
+          <Outlet></Outlet>
         </div>
+      </div>
     );
 };
 
