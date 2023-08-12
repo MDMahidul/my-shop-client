@@ -6,7 +6,7 @@ const DashBoardLayout = () => {
     return (
       <div>
         <DashboardNav></DashboardNav>
-        <div className="md:ms-72 px-4">
+        <div className="md:ms-72 pr-8">
           <Outlet></Outlet>
         </div>
       </div>

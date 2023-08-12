@@ -11,12 +11,13 @@ import Product from "../pages/DashBoard/Product/Product";
 import Customer from "../pages/DashBoard/Customer/Customer";
 import Orders from "../pages/DashBoard/Orders/Orders";
 import Error from "../pages/Error/Error";
+import Details from "../pages/DashBoard/Product/Details";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
-    errorElement:<Error></Error>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "dashboard",
+    path: "/dashboard",
     element: (
       <PrivateRoute>
         <DashBoardLayout />
@@ -45,15 +46,21 @@ const router = createBrowserRouter([
         element: <DashBoard />,
       },
       {
-        path: "dashboard/products",
+        path: "products",
         element: <Product></Product>,
       },
       {
-        path: "dashboard/customers",
+        path: "details/:id",
+        element: <Details />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
+      },
+      {
+        path: "customers",
         element: <Customer />,
       },
       {
-        path: "dashboard/orders",
+        path: "orders",
         element: <Orders />,
       },
     ],

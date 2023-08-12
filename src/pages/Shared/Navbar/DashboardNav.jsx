@@ -53,7 +53,7 @@ const DashboardNav = () => {
               </li>
               <li>
                 <Link
-                  to="dashboard/products"
+                  to="products"
                   className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
                 >
                   <AiFillShop className="text-xl text-red-700"></AiFillShop>
@@ -64,7 +64,7 @@ const DashboardNav = () => {
               </li>
               <li>
                 <Link
-                  to="dashboard/customers"
+                  to="customers"
                   className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
                 >
                   <BsPeople className="text-xl text-red-700"></BsPeople>
@@ -75,7 +75,7 @@ const DashboardNav = () => {
               </li>
               <li>
                 <Link
-                  to="dashboard/orders"
+                  to="orders"
                   className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
                 >
                   <HiOutlineShoppingCart className="text-xl text-red-700"></HiOutlineShoppingCart>
