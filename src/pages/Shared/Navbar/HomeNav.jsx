@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/img/logo.png'
 import ActiveLink from '../ActiveLink/ActiveLink';
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const HomeNav = () => {
-    const user='';
+    const { user, logOut } = useContext(AuthContext);
     return (
       <div>
         <nav className="bg-white border-gray-200 shadow-md mb-2">
@@ -63,12 +64,9 @@ const HomeNav = () => {
                 </li>
                 {user ? (
                   <>
-                    <div
-                      className="tooltip tooltip-bottom"
-                      data-tip={user.displayName}
-                    >
+                    <div>
                       <img
-                        className="w-10 rounded-full border-red-600 border mr-2 mt-[-5px]"
+                        className="w-10 h-10 rounded-full border-red-600 border mt-[-5px]"
                         src={
                           user.photoURL
                             ? user.photoURL
@@ -77,7 +75,7 @@ const HomeNav = () => {
                         alt=""
                       />
                     </div>
-                    <button className="btn-sm  btn-warning rounded mt-[-10px]">
+                    <button onClick={logOut} className="btn-sm  btn-warning rounded mt-[-10px]">
                       Log Out
                     </button>
                   </>
