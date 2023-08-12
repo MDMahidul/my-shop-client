@@ -12,7 +12,9 @@ const DashBoard = () => {
           Dashboard Overview
         </p>
         <div className="flex gap-6 justify-evenly my-10">
-          <Link className="card-btn">Add Product</Link>
+          <Link to="/dashboard/addproduct" className="card-btn">
+            Add Product
+          </Link>
           <Link className="card-btn">Add Customer</Link>
         </div>
         <div className="grid grid-cols-3 gap-4">

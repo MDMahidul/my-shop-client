@@ -12,6 +12,7 @@ import Customer from "../pages/DashBoard/Customer/Customer";
 import Orders from "../pages/DashBoard/Orders/Orders";
 import Error from "../pages/Error/Error";
 import Details from "../pages/DashBoard/Product/Details";
+import AddProduct from "../pages/DashBoard/Product/AddProduct";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         element: <Details />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/${params.id}`),
+      },
+      {
+        path: "addproduct",
+        element: <AddProduct />
       },
       {
         path: "customers",
