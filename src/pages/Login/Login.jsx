@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { TbFidgetSpinner } from "react-icons/tb";
 import Swal from 'sweetalert2';
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const [errors, setErrors] = useState("");
@@ -40,6 +41,9 @@ const Login = () => {
 
     return (
       <section className="bg-gray-50 ">
+        <Helmet>
+          <title>my shop | login</title>
+        </Helmet>
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 ">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">

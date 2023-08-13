@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         path: "details/:id",
         element: <Details />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://my-shop-server-omega.vercel.app/products/${params.id}`),
       },
       {
         path: "addproduct",
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
         path: "customerdetails/:id",
         element: <CustomerDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/customer/${params.id}`),
+          fetch(`https://my-shop-server-omega.vercel.app/customer/${params.id}`),
       },
       {
         path: "orders",
@@ -85,7 +85,7 @@ const router = createBrowserRouter([
         path: "orderdetails/:id",
         element: <OrderDetails/>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/order/${params.id}`),
+          fetch(`https://my-shop-server-omega.vercel.app/order/${params.id}`),
       },
     ],
   },

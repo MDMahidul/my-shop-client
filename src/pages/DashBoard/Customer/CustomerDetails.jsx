@@ -1,11 +1,15 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { Helmet } from "react-helmet-async";
 
 const CustomerDetails = () => {
     const customer = useLoaderData();
     const { name, email,phone,address } = customer;
     return (
       <div className="mt-[15vh]">
+        <Helmet>
+          <title>my shop | customer details</title>
+        </Helmet>
         <p className="text-3xl text-center py-5 mb-10  font-bold text-red-700">
           Customer Details
         </p>

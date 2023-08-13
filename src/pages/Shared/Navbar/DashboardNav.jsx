@@ -6,6 +6,8 @@ import { BsPeople } from "react-icons/bs";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import DashboardActiveLink from '../ActiveLink/DashboardActiveLink';
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const DashboardNav = () => {
     const {user,logOut} = useContext(AuthContext);
@@ -47,40 +49,37 @@ const DashboardNav = () => {
                   to="/dashboard"
                   className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
                 >
-                  <BiSolidDashboard className="text-xl text-red-700"></BiSolidDashboard>
+                  <BiSolidDashboard className="text-xl "></BiSolidDashboard>
                   <span className="ml-3">Dashboard</span>
                 </Link>
               </li>
               <li>
-                <Link
+                <DashboardActiveLink
                   to="products"
-                  className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
                 >
-                  <AiFillShop className="text-xl text-red-700"></AiFillShop>
+                  <AiFillShop className="text-xl "></AiFillShop>
                   <span className="flex-1 ml-3 whitespace-nowrap">
                     Products
                   </span>
-                </Link>
+                </DashboardActiveLink>
               </li>
               <li>
-                <Link
+                <DashboardActiveLink
                   to="customers"
-                  className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
                 >
-                  <BsPeople className="text-xl text-red-700"></BsPeople>
+                  <BsPeople className="text-xl "></BsPeople>
                   <span className="flex-1 ml-3 whitespace-nowrap">
                     Customers
                   </span>
-                </Link>
+                </DashboardActiveLink>
               </li>
               <li>
-                <Link
+                <DashboardActiveLink
                   to="orders"
-                  className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
                 >
-                  <HiOutlineShoppingCart className="text-xl text-red-700"></HiOutlineShoppingCart>
+                  <HiOutlineShoppingCart className="text-xl "></HiOutlineShoppingCart>
                   <span className="flex-1 ml-3 whitespace-nowrap">Orders</span>
-                </Link>
+                </DashboardActiveLink>
               </li>
             </ul>
             <div className="pt-48 ">

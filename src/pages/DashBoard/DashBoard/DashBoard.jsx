@@ -4,10 +4,14 @@ import { BsPeople } from 'react-icons/bs';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import Chart from './Chart';
+import { Helmet } from 'react-helmet-async';
 
 const DashBoard = () => {
     return (
       <div className="py-4">
+        <Helmet>
+          <title>my shop | dashboard</title>
+        </Helmet>
         <p className="text-3xl text-center py-5 border-b-2 border-gray-400  font-bold text-red-700">
           Dashboard Overview
         </p>
@@ -26,7 +30,7 @@ const DashBoard = () => {
               <h5 className="mb-3 text-center text-2xl font-bold text-gray-900">
                 Total Products: 200
               </h5>
-              <Link to="dashboard/products" className="card-btn">
+              <Link to="/dashboard/products" className="card-btn">
                 Details
               </Link>
             </div>
@@ -37,7 +41,7 @@ const DashBoard = () => {
               <h5 className="mb-3 text-center text-2xl font-bold text-gray-900">
                 Total Customers: 200
               </h5>
-              <Link to="dashboard/customers" className="card-btn">
+              <Link to="/dashboard/customers" className="card-btn">
                 Details
               </Link>
             </div>
@@ -48,7 +52,7 @@ const DashBoard = () => {
               <h5 className="mb-3 text-center text-2xl font-bold text-gray-900">
                 Total Orders: 200
               </h5>
-              <Link to="dashboard/orders" className="card-btn">
+              <Link to="/dashboard/orders" className="card-btn">
                 Details
               </Link>
             </div>

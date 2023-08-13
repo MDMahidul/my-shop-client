@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -11,10 +12,10 @@ const AddCustomer = () => {
     const email = form.email.value;
     const phone = form.phone.value;
     const address = form.address.value;
-    const uploadData = { name, email,phone, address };
+    const uploadData = { name, email, phone, address };
     console.log(uploadData);
 
-    fetch("http://localhost:5000/addcustomer", {
+    fetch("https://my-shop-server-omega.vercel.app/addcustomer", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -46,6 +47,9 @@ const AddCustomer = () => {
   };
   return (
     <div className="py-4">
+      <Helmet>
+        <title>my shop | add customer</title>
+      </Helmet>
       <p className="text-3xl text-center py-5   font-bold text-red-700">
         Add Customer
       </p>
