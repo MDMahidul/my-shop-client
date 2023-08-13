@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardNav from '../pages/Shared/Navbar/DashboardNav'    
+import DashNav from "../pages/Shared/Navbar/DashNav";    
 import { Outlet } from 'react-router-dom';
 
 const DashBoardLayout = () => {
