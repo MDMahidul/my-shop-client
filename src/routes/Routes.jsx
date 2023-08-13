@@ -15,6 +15,7 @@ import Details from "../pages/DashBoard/Product/Details";
 import AddProduct from "../pages/DashBoard/Product/AddProduct";
 import AddCustomer from "../pages/DashBoard/Customer/AddCustomer";
 import CustomerDetails from "../pages/DashBoard/Customer/CustomerDetails";
+import OrderDetails from "../pages/DashBoard/Orders/OrderDetails";
 
 const router = createBrowserRouter([
   {
@@ -72,13 +73,19 @@ const router = createBrowserRouter([
       },
       {
         path: "customerdetails/:id",
-        element: <CustomerDetails/>,
+        element: <CustomerDetails />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/customer/${params.id}`),
       },
       {
         path: "orders",
         element: <Orders />,
+      },
+      {
+        path: "orderdetails/:id",
+        element: <OrderDetails/>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/order/${params.id}`),
       },
     ],
   },

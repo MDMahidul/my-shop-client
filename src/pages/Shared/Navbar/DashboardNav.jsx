@@ -102,7 +102,7 @@ const DashboardNav = () => {
                   </div>
                   <button
                     onClick={handleLogOut}
-                    className="bg-red-700 text-white font-semibold p-2 hover:text-red-700 rounded-lg hover:bg-gray-200  group"
+                    className="bg-red-700 text-white font-semibold px-8 py-2 hover:text-red-700 rounded-lg hover:bg-gray-200  group"
                   >
                     Log Out
                   </button>
