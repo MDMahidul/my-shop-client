@@ -13,7 +13,7 @@ const Product = () => {
         })
     },[])
     return (
-      <div className="py-4">
+      <div className="py-4 mb-10">
         <p className="text-3xl text-center py-5   font-bold text-red-700">
           Products
         </p>

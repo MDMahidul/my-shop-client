@@ -96,8 +96,8 @@ const DashboardNav = () => {
                       }
                       alt=""
                     />
-                    <span className="text-red-700 text-xl font-bold py-4">
-                      Admin: {user.displayName}
+                    <span className="text-red-700 text-xl font-bold py-4 text-center">
+                      Admin: <br/> {user.displayName}
                     </span>
                   </div>
                   <button

@@ -15,7 +15,9 @@ const DashBoard = () => {
           <Link to="/dashboard/addproduct" className="card-btn">
             Add Product
           </Link>
-          <Link className="card-btn">Add Customer</Link>
+          <Link to="/dashboard/addcustomer" className="card-btn">
+            Add Customer
+          </Link>
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow ">

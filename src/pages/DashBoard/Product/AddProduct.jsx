@@ -10,9 +10,9 @@ const AddProduct = () => {
         const name = form.name.value;
         const price = form.price.value;
         const ratings = form.ratings.value;
-        const quantity = form.quantity.value;
+        const stock = form.quantity.value;
         const img = form.image.value;
-        const uploadData = {name,price,ratings,quantity,img};
+        const uploadData = { name, price, ratings, stock, img };
         console.log(uploadData);
 
         fetch("http://localhost:5000/addproduct", {

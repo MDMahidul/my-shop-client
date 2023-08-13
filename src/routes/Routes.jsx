@@ -13,6 +13,8 @@ import Orders from "../pages/DashBoard/Orders/Orders";
 import Error from "../pages/Error/Error";
 import Details from "../pages/DashBoard/Product/Details";
 import AddProduct from "../pages/DashBoard/Product/AddProduct";
+import AddCustomer from "../pages/DashBoard/Customer/AddCustomer";
+import CustomerDetails from "../pages/DashBoard/Customer/CustomerDetails";
 
 const router = createBrowserRouter([
   {
@@ -58,11 +60,21 @@ const router = createBrowserRouter([
       },
       {
         path: "addproduct",
-        element: <AddProduct />
+        element: <AddProduct />,
       },
       {
         path: "customers",
         element: <Customer />,
+      },
+      {
+        path: "addcustomer",
+        element: <AddCustomer />,
+      },
+      {
+        path: "customerdetails/:id",
+        element: <CustomerDetails/>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/customer/${params.id}`),
       },
       {
         path: "orders",
